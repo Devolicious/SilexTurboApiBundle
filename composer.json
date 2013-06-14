@@ -1,0 +1,34 @@
+{
+    "name": "devolicious/silex-turbo-api-bundle",
+    "description": "Generates documentation for your REST API from annotations",
+    "keywords": ["api", "documentation", "doc", "rest", "routing", "dic", "di", "dependency injection"],
+    "type": "silex-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Devolicious",
+            "homepage": "http://www.devolution.be"
+        }
+    ],
+    "require": {
+        "silex/silex": "~1.0",
+        "nelmio/api-doc-bundle": "dev-master",
+        "twig/twig": "1.13.*@dev",
+    },
+    "require-dev": {
+        "symfony/security": "~2.2",
+        "symfony/config": "~2.2",
+        "symfony/yaml": "~2.2",
+        "symfony/validator": "~2.2"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": { "Devolicious\\SilexTurboApiBundle": "" }
+    },
+    "target-dir": "Devolicious/SilexTurboApiBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
