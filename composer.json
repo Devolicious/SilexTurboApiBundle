@@ -1,7 +1,7 @@
 {
     "name": "devolicious/silex-turbo-api-bundle",
     "description": "Generates documentation for your REST API from annotations",
-    "keywords": ["api", "documentation", "doc", "rest", "routing", "dic", "di", "dependency injection"],
+    "keywords": ["api", "documentation", "doc", "rest", "routing", "dic", "di", "dependency injection", "silex"],
     "type": "silex-bundle",
     "license": "MIT",
     "authors": [

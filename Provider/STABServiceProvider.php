@@ -5,7 +5,7 @@ namespace Devolicious\SilexTurboApiBundle\Provider;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 
-class RoutingServiceProvider implements ServiceProviderInterface
+class STABServicerProvider implements ServiceProviderInterface
 {
     public function register(Application $app)
     {
