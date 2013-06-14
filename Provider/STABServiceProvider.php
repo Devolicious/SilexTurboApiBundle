@@ -10,6 +10,7 @@ class STABServiceProvider implements ServiceProviderInterface
     public function register(Application $app)
     {
         $app->register(new RoutingServiceProvider());
+        $app->register(new DIServiceProvider());
     }
 
     public function boot(Application $app)
