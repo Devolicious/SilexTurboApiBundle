@@ -1,0 +1,4 @@
+devolicious_apidoc:
+    pattern: /
+    defaults: { _controller: 'stab.controller.apidoc:index' }
+    methods:  [GET]

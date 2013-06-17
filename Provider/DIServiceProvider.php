@@ -8,6 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Dumper\PhpDumper;
 use Symfony\Component\Config\ConfigCache;
 use Devolicious\SilexTurboApiBundle\Resolver\ServiceControllerResolver;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @author ruud
@@ -24,10 +25,16 @@ class DIServiceProvider implements ServiceProviderInterface
 
             $containerBuilder->setParameter('dir.root', $app['dir.root']);
 
-            $extensions = array();
+            $extensions = new ArrayCollection();
+            if (isset($app['api.extensions']) && is_array($app['api.extensions'])) {
+                $extensions = new ArrayCollection($app['api.extensions']);
+            }
+            $extensions->add('\Devolicious\SilexTurboApiBundle\DependencyInjection\STABExtension');
+
             foreach ($extensions as $extension) {
-                $containerBuilder->registerExtension($extension);
-                $containerBuilder->loadFromExtension($extension->getAlias());
+                $class = new $extension();
+                $containerBuilder->registerExtension($class);
+                $containerBuilder->loadFromExtension($class->getAlias());
             }
 
             $containerBuilder->compile();

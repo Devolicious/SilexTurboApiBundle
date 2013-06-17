@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+        <title>{{ apiName }}</title>
+        <style type="text/css">
+            {{ css|raw }}
+        </style>
+        <script type="text/javascript">
+            {{ js|raw }}
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <a href=""><h1>{{ apiName }}</h1></a>
+            <br style="clear: both;" />
+        </div>
+        
+        <div class="container" id="resources_container">
+            <ul id="resources">
+                {% block content %}{% endblock %}
+            </ul>
+        </div>
+        <p id="colophon">
+            Documentation auto-generated on {{ date }}
+        </p>
+        <script type="text/javascript">
+            $('.toggler').click(function() {
+                $(this).next().slideToggle('slow');
+            });
+        </script>
+    </body>
+</html>

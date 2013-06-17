@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {% for doc in docs %}
+        <li class="resource">
+            <div class="heading">
+                <h2>{{ doc.getRoute().getPath() }}</h2>
+            </div>
+            <ul class="endpoints">
+                <li class="endpoint">
+                    <ul class="operations">
+                        {% set data = doc.toArray() %}
+                        {% include 'method.html.twig' %}
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    {% endfor %}
+{% endblock content %}

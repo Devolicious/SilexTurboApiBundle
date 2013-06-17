@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+  
+    <parameters>
+        <parameter key="nelmio.dir.root">%dir.root%/vendor/nelmio/api-doc-bundle</parameter>
+        <parameter key="nelmio.dir.bundle">/Nelmio/ApiDocBundle</parameter>
+        <parameter key="nelmio.assets.css">%nelmio.dir.root%%nelmio.dir.bundle%/Resources/public/css/screen.css</parameter>
+        <parameter key="nelmio.assets.js">%nelmio.dir.root%%nelmio.dir.bundle%/Resources/public/js/all.js</parameter>
+    </parameters>
+
+
+    <services>
+
+        <service id="stab.extractor.apidoc" class="Devolicious\SilexTurboApiBundle\Extractor\ApiDocExtractor">
+            <argument type="service" id="service_container" />
+            <call method="registerNelmioApiDocDir">
+                <argument>%nelmio.dir.root%</argument>
+            </call>
+        </service>
+
+    </services>
+</container>
