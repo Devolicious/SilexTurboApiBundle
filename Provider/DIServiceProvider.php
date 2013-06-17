@@ -24,7 +24,7 @@ class DIServiceProvider implements ServiceProviderInterface
             $containerBuilder = new ContainerBuilder();
 
             $containerBuilder->setParameter('dir.root', $app['dir.root']);
-            $containerBuilder->setParameter('dir.devolicious', __DIR__ . '/../../');
+            $containerBuilder->setParameter('dir.devolicious', __DIR__ . '/../../../');
 
             $extensions = new ArrayCollection();
             if (isset($app['api.extensions']) && is_array($app['api.extensions'])) {
