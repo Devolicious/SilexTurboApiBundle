@@ -17,8 +17,8 @@
         "symfony/yaml": "~2.2",
         "symfony/validator": "~2.2",
         "nelmio/api-doc-bundle": "dev-master",
-        "twig/twig": "1.13.*@dev",
-        "doctrine/dbal": "2.4.*@dev"
+        "twig/twig": "~1.13",
+        "doctrine/dbal": "~2.3"
     },
     "minimum-stability": "dev",
     "autoload": {
