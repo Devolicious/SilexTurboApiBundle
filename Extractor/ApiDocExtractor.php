@@ -156,9 +156,4 @@ class ApiDocExtractor
 
         return $annotation;
     }
-
-    public function registerNelmioApiDocDir($rootBundleDir)
-    {
-        AnnotationRegistry::registerAutoloadNamespace("Nelmio", $rootBundleDir);
-    }
 }

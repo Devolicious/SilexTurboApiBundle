@@ -15,9 +15,18 @@
 
         <service id="stab.extractor.apidoc" class="Devolicious\SilexTurboApiBundle\Extractor\ApiDocExtractor">
             <argument type="service" id="service_container" />
-            <call method="registerNelmioApiDocDir">
+        </service>
+
+        <service id="stab.annotation.loader" class="Devolicious\SilexTurboApiBundle\Annotation\Loader">
+            <call method="setDirectory">
+                <argument>Devolicious</argument>
+                <argument>%dir.devolicious%</argument>
+            </call>
+            <call method="setDirectory">
+                <argument>Nelmio</argument>
                 <argument>%nelmio.dir.root%</argument>
             </call>
+            <call method="registerAnnotations" />
         </service>
 
     </services>
