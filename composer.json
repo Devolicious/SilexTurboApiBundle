@@ -17,8 +17,16 @@
         "symfony/yaml": "~2.2",
         "symfony/validator": "~2.2",
         "nelmio/api-doc-bundle": "dev-master",
-        "twig/twig": "~1.13",
+        "twig/twig": "~1.13"
+    },
+    "provide": {
         "doctrine/dbal": "~2.3"
+    },
+    "suggest": {
+        "igorw/config-service-provider": "Easy config with yaml",
+        "monolog/monolog": "Allows more advanced logging of the application flow",
+        "filp/whoops": "PHP errors for cool kids",
+        "fzaninotto/faker": "Fake test data, like a boss"
     },
     "minimum-stability": "dev",
     "autoload": {
