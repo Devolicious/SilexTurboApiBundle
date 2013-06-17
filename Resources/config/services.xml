@@ -26,7 +26,6 @@
                 <argument>Nelmio</argument>
                 <argument>%nelmio.dir.root%</argument>
             </call>
-            <call method="registerAnnotations" />
         </service>
 
     </services>

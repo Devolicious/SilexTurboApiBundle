@@ -11,6 +11,8 @@ class STABServiceProvider implements ServiceProviderInterface
     {
         $app->register(new RoutingServiceProvider());
         $app->register(new DIServiceProvider());
+
+        $app['container']->get('stab.annotation.loader')->registerAnnotations();
     }
 
     public function boot(Application $app)
