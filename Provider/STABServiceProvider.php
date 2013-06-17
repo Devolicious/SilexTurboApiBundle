@@ -12,7 +12,7 @@ class STABServiceProvider implements ServiceProviderInterface
         $app->register(new RoutingServiceProvider());
         $app->register(new DIServiceProvider());
 
-        $app->register(new Silex\Provider\TwigServiceProvider(), array(
+        $app->register(new \Silex\Provider\TwigServiceProvider(), array(
             'twig.path' => array(__DIR__ . '/../Resources/views/')
         ));
 
