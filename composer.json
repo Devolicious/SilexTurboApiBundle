@@ -17,9 +17,7 @@
         "symfony/yaml": "~2.2",
         "symfony/validator": "~2.2",
         "nelmio/api-doc-bundle": "~2.2",
-        "twig/twig": "~1.13"
-    },
-    "provide": {
+        "twig/twig": "~1.13",
         "doctrine/dbal": "~2.3"
     },
     "suggest": {
