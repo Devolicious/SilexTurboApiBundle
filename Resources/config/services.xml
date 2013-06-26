@@ -13,6 +13,8 @@
 
     <services>
 
+        <service id="stab.security.encoder" class="Devolicious\SilexTurboApiBundle\Security\Encoder\ApiEncoder" />
+
         <service id="stab.extractor.apidoc" class="Devolicious\SilexTurboApiBundle\Extractor\ApiDocExtractor">
             <argument type="service" id="service_container" />
         </service>
