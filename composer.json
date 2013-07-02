@@ -18,7 +18,7 @@
         "symfony/validator": "~2.2",
         "nelmio/api-doc-bundle": "~2.2",
         "twig/twig": "~1.13",
-        "doctrine/dbal": "~2.3"
+        "doctrine/orm": "~2.3"
     },
     "suggest": {
         "igorw/config-service-provider": "Easy config with yaml",
