@@ -33,7 +33,7 @@ class SecurityServiceProvider implements ServiceProviderInterface
         $app->register(new \Silex\Provider\SecurityServiceProvider(), array(
             'security.firewalls' => array(
                 'wsse_secured' => array(
-                    'pattern' => '^/api/(?!doc).*',
+                    'pattern' => '^'.($app['api.prefix'] != null ? $app['api.prefix'] : '/api').'/(?!doc).*',
                     'security' => $app['api.security.enabled'] === false ? false : true,
                     'stateless' => true,
                     'wsse' => true,
