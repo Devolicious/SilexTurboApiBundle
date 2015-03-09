@@ -37,6 +37,7 @@ class ApiListener implements ListenerInterface
         } catch (AuthenticationException $failed) {
             $response = new Response();
             $response->setStatusCode(403);
+            $response->setContent($failed->getMessage());
             $event->setResponse($response);
         }
     }
